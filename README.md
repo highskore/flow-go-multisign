@@ -1,4 +1,4 @@
-# Flow - Go - Multisig
+# Flow - Go - Multisign
 
 This repository is a simple implementation of a multisig service backend and demo frontend, which allows you to execute multisign transactions on the Flow blockchain signed with Google Cloud Platform KMS.
 

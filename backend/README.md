@@ -1,4 +1,4 @@
-# FLOW <-> Go - Cosign Service
+# Flow Multisign Demo - Go Cosign Service
 
 This is a simple service that allows you execute multisignature transactions on the Flow blockchain.
 
