@@ -17,7 +17,7 @@ Before running the frontend app, make sure you have the following installed:
     npm install
    ```
 
-2. Create a `.env` file in the root directory of the project and add the following environment variables:
+2. Create a `.env.local` file in the root directory of the project and add the following environment variables:
 
    ```bash
     # FLOW

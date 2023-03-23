@@ -13,10 +13,13 @@ fcl
 const App = () => {
   const [user, setUser] = useState();
 
+  const [transaction, setTransaction] = useState();
+
   useEffect(() => {
     fcl.currentUser().subscribe(setUser);
   }, []);
   const multiSign = async () => {
+    setTransaction('');
     const transactionId = await fcl
       .send([
         fcl.transaction`
@@ -33,7 +36,7 @@ const App = () => {
       ])
       .then(fcl.decode);
 
-    console.log(transactionId);
+    setTransaction(transactionId);
   };
 
   return (
@@ -42,9 +45,16 @@ const App = () => {
         <h1>{user && user.addr ? user.addr : 'Not logged in.'}</h1>
         <div>
           <button onClick={() => fcl.authenticate()}>Log In</button>
-          <button onClick={() => fcl.unauthenticate()}>Log In</button>
+          <button onClick={() => fcl.unauthenticate()}>Log Out</button>
         </div>
         <button onClick={() => multiSign()}>Run Multi-Sign Tx</button>
+        {transaction && (
+          <p>
+            <a href={`https://flow-view-source.com/testnet/tx/${transaction}`} target="_blank" rel="noreferrer">
+              {transaction}
+            </a>
+          </p>
+        )}
       </header>
     </div>
   );

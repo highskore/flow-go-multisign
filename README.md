@@ -40,13 +40,13 @@ Before running the service, make sure you have the following installed:
 
 ## Usage
 
-1. Start the backend service using the following command:
+1. Open a new terminal and start the backend service using the following command:
 
    ```bash
-   go run backend/cmd/server/main.go
+   cd backend && go run cmd/server/main.go
    ```
 
-2. Start the frontend service using the following command:
+2. Open a new terminal and start the frontend service using the following command:
 
    ```bash
    cd frontend && npm run start
