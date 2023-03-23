@@ -21,8 +21,8 @@ Before running the frontend app, make sure you have the following installed:
 
    ```bash
     # FLOW
-    ADMIN_ADDRESS=0x01cf0e2f2f715450 - Your flow account admin address
-    ADMIN_KEY_INDEX=0 - Your flow account admin key index
+    REACT_ADMIN_ADDRESS=0x01cf0e2f2f715450 - Your flow account admin address
+    REACT_ADMIN_KEY_INDEX=0 - Your flow account admin key index
    ```
 
 ## Usage
